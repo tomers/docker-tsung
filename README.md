@@ -13,7 +13,7 @@ This image is automatically built at every push of this repository and every tim
 ## Run
 
 ```
-docker run -v /path/to/tsung.xml:/root/.tsung/tsung.xml -v /path/to/logs:/root/.tsung/logs prima/tsung:1.6
+docker run -v /path/to/tsung.xml:/root/.tsung/tsung.xml -v /path/to/logs:/root/.tsung/log -P prima/tsung:1.6
 ```
 
 Or, you can create your own derived image, with the configuration in the image itself.
@@ -22,6 +22,8 @@ Or, you can create your own derived image, with the configuration in the image i
 FROM prima/tsung:1.6
 COPY my-config/tsung.xml /root/.tsung/tsung.xml
 ```
+
+You should be able to access the web-ui on the 8091 IP address while tests are running.
 
 ## Configuration file
 

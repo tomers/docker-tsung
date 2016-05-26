@@ -13,4 +13,6 @@ RUN apt-get update && \
     && make install \
     && rm -rf /tmp/tsung*
 
+EXPOSE 8091
+
 ENTRYPOINT ["tsung"]
