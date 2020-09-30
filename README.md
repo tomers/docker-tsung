@@ -4,22 +4,22 @@
 
 ## Supported tags and respective `Dockerfile` links
 
--	[`1.6.0`, `1.6`, `1`, `latest` (*Dockerfile*)](https://github.com/primait/docker-tsung/blob/master/1.6/Dockerfile)
+-	[`1.7.0`, `1.7`, `1`, `latest` (*Dockerfile*)](https://github.com/primait/docker-tsung/blob/master/1.7/Dockerfile)
 
 ## Build and update process
 
-This image is automatically built at every push of this repository and every time that the `erlang:18` base image gets updated in order to ensure that bugfixes and security updates are immediately applied.
+This image is automatically built at every push of this repository and every time that the `erlang:20` base image gets updated in order to ensure that bugfixes and security updates are immediately applied.
 
 ## Run
 
 ```
-docker run -v /path/to/tsung.xml:/root/.tsung/tsung.xml -v /path/to/logs:/root/.tsung/log -P prima/tsung:1.6
+docker run -v /path/to/tsung.xml:/root/.tsung/tsung.xml -v /path/to/logs:/root/.tsung/log -P prima/tsung:1.7
 ```
 
 Or, you can create your own derived image, with the configuration in the image itself.
 
 ```dockerfile
-FROM prima/tsung:1.6
+FROM prima/tsung:1.7
 COPY my-config/tsung.xml /root/.tsung/tsung.xml
 ```
 
